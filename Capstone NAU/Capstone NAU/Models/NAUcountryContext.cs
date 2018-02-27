@@ -15,6 +15,11 @@ namespace Capstone_NAU.Models
         public virtual DbSet<SurveyQuestion> SurveyQuestion { get; set; }
         public virtual DbSet<SurveyResponse> SurveyResponse { get; set; }
 
+        public NAUcountryContext(DbContextOptions<NAUcountryContext> options) : base(options)
+        {
+            //
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
